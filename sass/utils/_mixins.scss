@@ -1,0 +1,16 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin textStyle($font-weight, $line-height) {
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin position($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+

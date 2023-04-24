@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>markup-hw-05</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="main container">
+      <a href="" class="logo"><span class="logo__accent">Web</span>Studio</a>
+  
+      <nav>
+        <ul class="nav list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link">Studio</a>
+          </li>
+          <li class="nav__item">
+            <a href="./portfolio.html" class="nav__link nav__link--active">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+  
+      <ul class="contacts list">
+        <li class="contacts__item">
+          <a href="mailto:info@devstudio.com" class="contacts__link">
+            <svg class="icon-mail">
+              <use href="./img/icon-sprite.svg#icon-mail"></use>
+            </svg>
+            info@devstudio.com</a>
+        </li>
+  
+        <li class="contacts__item">
+          <a href="tel:+380961111111" class="contacts__link">
+            <svg class="icon-phone">
+              <use href="./img/icon-sprite.svg#icon-phone"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Portfolio</h1>
+  
+    <section class="section">
+      <h2 class="visually-hidden">Filter of works</h2>
+      <div class="container">
+        <ul class="filter__list list">
+
+          <li>
+            <button class="filter__button" type="button">All</button>
+          </li>
+
+          <li>
+            <button class="filter__button" type="button">Websites</button>
+          </li>
+
+          <li>
+            <button class="filter__button" type="button">Additions</button>
+          </li>
+
+          <li>
+            <button class="filter__button" type="button">Design</button>
+          </li>
+
+          <li>
+            <button class="filter__button" type="button">Marketing</button>
+          </li>
+        </ul>
+
+      
+        <ul class="portfolio list">
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">              
+              <div class="portfolio__img">
+                <img class="img" src="./img/portfolio/tech.jpg" alt="the promo site on a laptop">
+                <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                  services. All this will allow the visitor to get comprehensive information about the company or private person.           
+                </p>
+              </div>             
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Techcrack</h3>
+                <p class="portfolio__descr">Website</p>
+              </div>
+
+            </a>
+          </li>
+        
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">
+              <div class="portfolio__img">
+                <img class="img" src="./img/portfolio/new-orleans.jpg" alt="two basketball players">
+                <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                  services. All this will allow the
+                  visitor to get comprehensive information about the company or private person.
+                </p>
+              </div>
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Poster New Orlean vs Golden Star</h3>
+                <p class="portfolio__descr">Designe</p>
+              </div>
+
+            </a>
+          </li>
+        
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">
+            <div class="portfolio__img">
+              <img class="img" src="./img/portfolio/seafood.jpg" alt="the logo seafood restaurant">
+              <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                services. All this will allow the
+                visitor to get comprehensive information about the company or private person.
+              </p>
+            </div>
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Restaurant Seafood</h3>
+                <p class="portfolio__descr">App</p>
+              </div>
+
+            </a>
+          </li>
+        
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">
+              <div class="portfolio__img">
+                <img class="img" src="./img/portfolio/prime.jpg" alt="headphones">
+                <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                  services. All this will allow the
+                  visitor to get comprehensive information about the company or private person.
+                </p>
+              </div>
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Progect Prime</h3>
+                <p class="portfolio__descr">Marketing</p>
+              </div>
+
+            </a>
+          </li>
+        
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">
+              <div class="portfolio__img">
+                <img class="img" src="./img/portfolio/boxes.jpg" alt="two boxes">
+                <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                  services. All this will allow the
+                  visitor to get comprehensive information about the company or private person.
+                </p>
+              </div>
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Progect Boxes</h3>
+                <p class="portfolio__descr">App</p>
+              </div>
+
+            </a>
+          </li>
+        
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">
+              <div class="portfolio__img">
+                <img class="img" src="./img/portfolio/inspiration.jpg" alt="the site on a monitor screen">
+                <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                  services. All this will allow the
+                  visitor to get comprehensive information about the company or private person.
+                </p>
+              </div>
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Inspiration has no Borders</h3>
+                <p class="portfolio__descr">Website</p>
+              </div>
+
+            </a>
+          </li>
+        
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">
+              <div class="portfolio__img">
+                <img class="img" src="./img/portfolio/limited-edition.jpg" alt="an opened magazine">
+                <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                  services. All this will allow the
+                  visitor to get comprehensive information about the company or private person.
+                </p>
+              </div>
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Limited Edition edition</h3>
+                <p class="portfolio__descr">Designe</p>
+              </div>
+
+            </a>
+          </li>
+        
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">
+              <div class="portfolio__img">
+                <img class="img" src="./img/portfolio/lab.jpg" alt="a label with the logo">
+                <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                  services. All this will allow the
+                  visitor to get comprehensive information about the company or private person.
+                </p>
+              </div>
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Progect LAB</h3>
+                <p class="portfolio__descr">Marketing</p>
+              </div>
+
+            </a>
+          </li>
+        
+          <li class="portfolio__item">
+            <a class="portfolio__link" href="">
+              <div class="portfolio__img">
+                <img class="img" src="./img/portfolio/growing-business.jpg" alt="heands that print on a laptop">
+                <p class="portfolio__text">The resource offers comprehensive offers with different levels of functionality and
+                  services. All this will allow the
+                  visitor to get comprehensive information about the company or private person.
+                </p>
+              </div>
+              
+              <div class="portfolio__content">
+                <h3 class="portfolio__title">Growing Business</h3>
+                <p class="portfolio__descr">App</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__page container">
+      <div class="footer__contacts">
+        <a class="logo footer__logo" href=""><span class="logo__accent">Web</span>Studio</a>
+        <address>
+          <a class="footer__adress" href="">Kyiv, Lesia Ukrainka Ave, 26</a>
+          <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+          <a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a>
+        </address>
+      </div>
+  
+      <div class="footer__list">
+        <p class="footer__title">Join</p>
+  
+        <ul class="footer__networks list">
+          <li>
+            <a class="icon-bg footer__icon-bg" href="https://www.instagram.com/">
+              <svg class="icon">
+                <use href="./img/icon-sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+  
+          <li>
+            <a class="icon-bg footer__icon-bg" href="https://twitter.com/">
+              <svg class="icon">
+                <use href="./img/icon-sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+  
+          <li>
+            <a class="icon-bg footer__icon-bg" href="https://www.facebook.com/">
+              <svg class="icon">
+                <use href="./img/icon-sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+  
+          <li>
+            <a class="icon-bg footer__icon-bg" href="https://www.linkedin.com/">
+              <svg class="icon">
+                <use href="./img/icon-sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <form class="footer__form" name="subscription">
+        <label class="footer__title" for="subscr">Subscribe to the newsletter</label>
+  
+        <div class="footer__items">
+          <input class="footer__field" id="subscr" name="email" type="email" placeholder="E-mail" />
+          <button class="footer__button" type="submit">
+            Sign up
+            <svg class="footer__button-icon">
+              <use href="./img/icon-sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.header {
+  background-color: $primary-white-color;
+  border: 1px solid #ececec;
+}
+
+.main {
+  @extend %flex;
+}
+
+.nav {
+  display: flex;
+  margin-left: 93px;
+
+  @include textStyle(500, 1.14);
+  letter-spacing: 0.02em;
+  
+    &__item:not(:first-child) {
+      margin-left: 50px;
+    }
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 32px 0;
+
+  color: #212121;
+  text-align: center;
+  text-decoration: none;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contacts {
+  @extend .nav;
+  margin-left: auto;
+
+  &__item:not(:first-child) {
+      margin-left: 50px;
+    }
+}
+
+.icon-mail {
+  @include size(16px, 12px);
+  margin-right: 10px;
+}
+
+.icon-phone {
+  @include size(10px, 16px);
+  margin-right: 10px;
+}
+
+.contacts__link {
+  @extend %flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $primary-text-color;
+  text-decoration: none;
+
+  transition: color 250ms $timing-function,
+    fill 250ms $timing-function;
+
+&:hover,
+&:focus {
+  color: $accent-color;
+  fill: $accent-color;
+}
+}
