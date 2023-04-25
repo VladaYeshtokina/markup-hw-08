@@ -1,12 +1,10 @@
 .hero {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 200px 0;
+  margin: auto;
+  @include size(480px, 400px);  
+  padding: 118px 0;
 
   text-align: center;
-
+  
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)),
@@ -16,21 +14,43 @@
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 118px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+  }
+
 &__title {
   margin: 0 auto 30px auto;
-  max-width: 696px;
+  width: 360px;
+ 
 
-  @include textStyle(900, 1.36);
+  @include textStyle(900, 1.62);
   letter-spacing: 0.06em;
-  font-size: 44px;
+  font-size: 22px;
   text-transform: uppercase;
   color: $primary-white-color;
+
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }  
 }
 
 &__button {
-  min-width: 216px;
+  width: 200px;  
   padding: 10px 32px;
   @extend %button;
+
+  @media screen and (min-width: 1200px) {
+    width: 216px;
+  }
 }
 
 &__button:hover,
