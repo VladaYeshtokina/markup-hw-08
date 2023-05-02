@@ -28,43 +28,89 @@
       <div class="main container">
         <a href="" class="logo"><span class="logo__accent">Web</span>Studio</a>
 
-        <svg class="menu">
-          <use href="./img/icon-sprite.svg#menu-icon"></use>          
-        </svg>
+        <button 
+        class="menu-button is-open" 
+        type="button" 
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-button>
+          <svg width="40" height="40" aria-label="switch of mobile menu">
+            <use href="./img/icon-sprite.svg#menu-icon" class="open-icon" ></use>
+            <use href="./img/icon-sprite.svg#close-icon" class="close-icon" data-menu-close></use>
+          </svg>
+        </button>
 
-        <nav>
-          <ul class="nav list">
-            <li class="nav__item">
-              <a href="" class="nav__link nav__link--active">Studio</a>
+       
+
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <nav>
+            <ul class="nav list">
+              <li class="nav__item">
+                <a href="" class="nav__link nav__link--active">Studio</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link">Portfolio</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="contacts__link">
+                <svg class="icon-mail">
+                  <use href="./img/icon-sprite.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link">Portfolio</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Contacts</a>
+          
+            <li class="contacts__item">
+              <a href="tel:+380961111111" class="contacts__link contacts__link--style">
+                <svg class="icon-phone">
+                  <use href="./img/icon-sprite.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
 
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="icon-mail">
-                <use href="./img/icon-sprite.svg#icon-mail"></use>
+          <ul class="menu-networks list">
+            <li>
+              <a class="menu-networks__link" href="https://www.instagram.com/">Instagram</a>
+              <svg class="line-icon">
+                <use href="./img/icon-sprite.svg#line-icon"></use>
               </svg>
-              info@devstudio.com
-            </a>
-          </li>
-
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__link">
-              <svg class="icon-phone">
-                <use href="./img/icon-sprite.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>        
+              
+            </li>
+          
+            <li>
+              <a class="menu-networks__link" href="https://twitter.com/">Twitter
+                <svg class="line-icon">
+                  <use href="./img/icon-sprite.svg#line-icon"></use>
+                </svg>
+              </a>
+            </li>
+          
+            <li>
+              <a class="menu-networks__link" href="https://www.facebook.com/">Facebook
+                <svg class="line-icon">
+                  <use href="./img/icon-sprite.svg#line-icon"></use>
+                </svg>
+              </a>
+            </li>
+          
+            <li>
+              <a class="menu-networks__link" href="https://www.linkedin.com/">LinkedIn
+                <svg class="line-icon">
+                  <use href="./img/icon-sprite.svg#line-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>       
       </div>
     </header>
 
@@ -366,7 +412,7 @@
 
       <!-- Regular customers -->
       <section class="section">
-        <div class="container">
+        <div class="customers container">
           <h2 class="customers__title">Regular customers</h2>
 
           <ul class="customers__list list">
@@ -475,7 +521,7 @@
           </ul>
         </div>
 
-        <form class="footer__form" name="subscription">
+        <form name="subscription">
           <label class="footer__title" for="subscr"
             >Subscribe to the newsletter</label>
 

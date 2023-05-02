@@ -1,34 +1,40 @@
 .services {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
   padding-top: 0;
+  display: flex;
 
-&__title {
-  @extend %title;
+  &__title {
+    @include title();
+  }
+
+  &__list {
+    @include listStyle();
+  }
+
+  &__item {
+    position: relative;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+
+  &__descr {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include size(100%, 70px);
+
+    display: block;
+    padding: 27px 98px;
+
+    @include textStyle(700, 1.14);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $primary-white-color;
+    background: rgba(47, 48, 58, 0.8);
+  }
 }
 
-&__list {
-  @extend %listStyle;
-}
-
-&__item {
-  position: relative;
-  flex-basis: calc((100% - 2 * 30px) / 3);
-}
-
-&__descr {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  @include size(100%, 70px);
-  
-  display: block;
-  padding: 27px 98px;
-
-  @include textStyle(700, 1.14);
-  text-align: center;
-  text-transform: uppercase;
-
-  color: $primary-white-color;
-  background: rgba(47, 48, 58, 0.8);
-}
-}

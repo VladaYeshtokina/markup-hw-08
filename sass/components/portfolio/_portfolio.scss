@@ -1,5 +1,5 @@
 .portfolio {
-  @extend %listStyle;
+  @include listStyle();
   gap: 30px;
 
 &__link {
@@ -30,7 +30,7 @@
   @include size(100%, 100%);
   padding: 0 24px;
 
-  @extend %flex;
+  @include flex();
 
   @include textStyle(400, 1.56);
   font-size: 18px;

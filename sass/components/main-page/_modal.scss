@@ -7,10 +7,10 @@
     visibility 250ms $timing-function;
 }
 
-.modal {
+.modal {  
   @include position(absolute, 50%, 50%);
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   padding: 40px;
 
   background-color: $primary-white-color;
@@ -26,7 +26,7 @@
   top: 8px;
   right: 8px;
   @include size(30px, 30px);
-  @extend %flex;
+  @include flex();
   justify-content: center;
   
   background-color: $primary-white-color;
@@ -55,7 +55,7 @@
 }
 
 .form {
-  width: 448px;
+  width: 370px;
 
 &__el {
   position: relative;
@@ -128,8 +128,7 @@
 }
 
 &:focus-within &__field {
-  border-color: $accent-color;
-   
+  border-color: $accent-color;   
 }
 
 &:focus-within &__text,
@@ -172,15 +171,25 @@
   margin-left: 24px;
   line-height: 1.71;
   color: $primary-text-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .checkbox__link {
   line-height: 1.71;
   color: $accent-color;
+
+  @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
 }
 
 .submit-button {
-  @extend %button;
+  @include button();
   margin: auto;
   padding: 10px 52px;
   min-width: 200px;
@@ -193,3 +202,17 @@
   background-color: $button-hover-color;
 }
 }
+
+
+// desktop
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+
+  .form {
+    width: 448px;
+  }
+}
+

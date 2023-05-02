@@ -12,49 +12,56 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding: 118px 0;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1600px;
-    height: 600px;
-    padding: 200px 0;
-  }
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
 
 &__title {
   margin: 0 auto 30px auto;
-  width: 360px;
- 
+  width: 360px; 
 
   @include textStyle(900, 1.62);
   letter-spacing: 0.06em;
   font-size: 22px;
   text-transform: uppercase;
-  color: $primary-white-color;
-
-  @media screen and (min-width: 1200px) {
-    width: 696px;
-    font-size: 44px;
-    line-height: 1.36;
-  }  
+  color: $primary-white-color;  
 }
 
 &__button {
   width: 200px;  
   padding: 10px 32px;
-  @extend %button;
-
-  @media screen and (min-width: 1200px) {
-    width: 216px;
-  }
+  @include button();  
 }
 
 &__button:hover,
 &__button:focus {
   background-color: $button-hover-color;
 }
+}
+
+
+// tablet
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 768px;
+    padding: 118px 0;
+
+    &__title {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+}
+
+
+// desktop
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+
+    &__button {
+      width: 216px;
+    }
+  }
 }

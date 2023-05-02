@@ -1,4 +1,4 @@
-%button {
+@mixin button() {
   @include textStyle(700, 1.88);
   letter-spacing: 0.06em;
   font-size: 16px;
@@ -12,21 +12,27 @@
   cursor: pointer;
 }
 
-%title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+@mixin title() {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;    
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
-%listStyle {
+@mixin listStyle() {
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
 }
 
-%flex {
+@mixin flex() {
   display: flex;
   align-items: center;
 }
