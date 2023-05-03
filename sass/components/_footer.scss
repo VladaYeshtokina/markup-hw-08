@@ -2,12 +2,13 @@
   background-color: #2f303a;
 
 &__page {  
-  padding: 60px 88px 60px 76px;  
+  padding: 60px 15px;
   display: flex;
   flex-direction: column;
   text-align: center;
 
   @media screen and (min-width: 768px) {
+    padding: 60px 88px 60px 76px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -130,7 +131,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 450px;
   }
 

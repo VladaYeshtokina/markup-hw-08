@@ -8,11 +8,15 @@ body {
   background-color: #ffffff;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 480px) {
   .container {
     width: 480px;
   }
@@ -139,6 +143,8 @@ p {
 
 @media screen and (max-width: 768px) {
   .menu-button {
+    position: initial;
+    z-index: 2;
     margin-left: auto;
     padding: 0;
     display: inline-flex;
@@ -165,8 +171,9 @@ p {
   }
   .mobile-menu.is-open {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 0;
+    left: 50%;
+    z-index: 1;
     padding-top: 38px;
     padding-left: 40px;
     padding-bottom: 48px;
@@ -174,6 +181,7 @@ p {
     height: 796px;
     display: block;
     background-color: #ffffff;
+    transform: translateX(-50%);
   }
   .mobile-menu.is-open .icon-mail, .mobile-menu.is-open .icon-phone {
     display: none;
@@ -246,6 +254,7 @@ p {
     display: none;
   }
   .mobile-menu {
+    height: 80px;
     display: flex;
     width: 100%;
   }
@@ -359,8 +368,7 @@ p {
 }
 .hero {
   margin: auto;
-  width: 480px;
-  height: 400px;
+  max-width: 1600px;
   padding: 118px 0;
   text-align: center;
   background-color: #c4c4c4;
@@ -401,7 +409,6 @@ p {
 
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
     padding: 118px 0;
   }
   .hero__title {
@@ -412,7 +419,6 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 1600px;
     height: 600px;
     padding: 200px 0;
   }
@@ -589,6 +595,7 @@ p {
 
 .team__networks {
   display: flex;
+  justify-content: center;
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 30px;
@@ -695,13 +702,14 @@ p {
   background-color: #2f303a;
 }
 .footer__page {
-  padding: 60px 88px 60px 76px;
+  padding: 60px 15px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .footer__page {
+    padding: 60px 88px 60px 76px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -816,7 +824,7 @@ p {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .footer__field {
     width: 450px;
   }
@@ -978,14 +986,22 @@ p {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 94px 15px;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 0;
+    overflow-y: none;
+  }
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 450px;
-  min-height: 609px;
+  max-width: 450px;
+  max-height: 609px;
   padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1022,6 +1038,12 @@ p {
   line-height: 1.15;
   font-size: 20px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-weight: 700;
+    line-height: 1.5;
+  }
 }
 
 .form {
@@ -1105,7 +1127,17 @@ p {
 .checkbox {
   position: relative;
   margin-bottom: 30px;
+  width: 370px;
   display: inline-block;
+  font-size: 11px;
+  line-height: 1.17;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    font-size: 12px;
+    line-height: 1.71;
+    width: 426px;
+  }
 }
 
 .checkbox__icon, .checkbox__el:checked + .checkbox__icon {
@@ -1117,6 +1149,13 @@ p {
   background-image: url(/img/svg/icon-check-off.svg);
   transform: translateY(-50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__icon, .checkbox__el:checked + .checkbox__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+  }
 }
 .checkbox__icon:hover, .checkbox__el:checked + .checkbox__icon:hover {
   cursor: pointer;
@@ -1130,25 +1169,16 @@ p {
 
 .checkbox__text {
   margin-left: 24px;
-  line-height: 1.71;
   color: #757575;
 }
 @media screen and (min-width: 1200px) {
   .checkbox__text {
-    font-size: 12px;
-    line-height: 1.17;
+    margin-left: 36px;
   }
 }
 
 .checkbox__link {
-  line-height: 1.71;
   color: #2196f3;
-}
-@media screen and (min-width: 1200px) {
-  .checkbox__link {
-    font-size: 12px;
-    line-height: 1.17;
-  }
 }
 
 .submit-button {
@@ -1175,7 +1205,7 @@ p {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    min-width: 528px;
     height: 581px;
   }
   .form {

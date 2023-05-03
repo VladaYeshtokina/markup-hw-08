@@ -5,12 +5,25 @@
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms $timing-function,
     visibility 250ms $timing-function;
+
+  padding: 94px 15px;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    overflow-y: none;    
+  }  
 }
 
 .modal {  
   @include position(absolute, 50%, 50%);
-  min-width: 450px;
-  min-height: 609px;
+  
+  // width: 100%;
+  max-width: 450px;
+  // height: 95vh;
+  max-height: 609px;
+  // overflow: scroll;
+   
   padding: 40px;
 
   background-color: $primary-white-color;
@@ -18,13 +31,13 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);  
 }
 
 .close-button {
   position: absolute;
   top: 8px;
-  right: 8px;
+  right: 8px;   
   @include size(30px, 30px);
   @include flex();
   justify-content: center;
@@ -52,6 +65,10 @@
   @include textStyle(700, 1.15);
   font-size: 20px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    @include textStyle(700, 1.5);    
+  }
 }
 
 .form {
@@ -141,7 +158,17 @@
 .checkbox {
   position: relative;
   margin-bottom: 30px;
+  width: 370px;
   display: inline-block;
+
+  font-size: 11px;
+  line-height: 1.17;    
+  
+@media screen and (min-width: 1200px) {
+  font-size: 12px;
+  line-height: 1.71;
+  width: 426px;
+}
 }
 
 .checkbox__icon {
@@ -152,6 +179,10 @@
 
   transform: translateY(-50%);
   transition: transform 250ms $timing-function;
+
+@media screen and (min-width: 1200px) {
+  @include position(absolute, 50%, 12px);  
+}
 
 &:hover {
   cursor: pointer;
@@ -169,23 +200,15 @@
 
 .checkbox__text {
   margin-left: 24px;
-  line-height: 1.71;
   color: $primary-text-color;
 
-  @media screen and (min-width: 1200px) {
-    font-size: 12px;
-    line-height: 1.17;
-  }
+@media screen and (min-width: 1200px) {
+  margin-left: 36px;
+}
 }
 
-.checkbox__link {
-  line-height: 1.71;
-  color: $accent-color;
-
-  @media screen and (min-width: 1200px) {
-      font-size: 12px;
-      line-height: 1.17;
-    }
+.checkbox__link {  
+  color: $accent-color;  
 }
 
 .submit-button {
@@ -206,11 +229,12 @@
 
 // desktop
 @media screen and (min-width: 1200px) {
-  .modal {
-    width: 528px;
-    height: 581px;
+  .modal {    
+    min-width: 528px;    
+    height: 581px; 
+    
   }
-
+  
   .form {
     width: 448px;
   }

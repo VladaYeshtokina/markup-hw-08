@@ -1,6 +1,6 @@
 .hero {
   margin: auto;
-  @include size(480px, 400px);  
+  max-width: 1600px;
   padding: 118px 0;
 
   text-align: center;
@@ -40,8 +40,7 @@
 
 // tablet
 @media screen and (min-width: 768px) {
-  .hero {
-    width: 768px;
+  .hero {    
     padding: 118px 0;
 
     &__title {
@@ -55,8 +54,7 @@
 
 // desktop
 @media screen and (min-width: 1200px) {
-  .hero {
-    width: 1600px;
+  .hero {    
     height: 600px;
     padding: 200px 0;
 
