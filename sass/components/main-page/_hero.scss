@@ -1,32 +1,46 @@
 .hero {
-  margin: auto;
-  max-width: 1600px;
+  margin: auto;  
   padding: 118px 0;
+  max-width: 480px;  
 
   text-align: center;
   
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)),
-    url(../img/hero.jpg);
+    url(../../../img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  
   border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+      url(../../../img/hero@2x.jpg);
+  }
 
 &__title {
   margin: 0 auto 30px auto;
-  width: 360px; 
+  max-width: 360px;
 
   @include textStyle(900, 1.62);
   letter-spacing: 0.06em;
-  font-size: 22px;
+  font-size: 26px;
   text-transform: uppercase;
-  color: $primary-white-color;  
+  color: $primary-white-color;
+
+  @media screen and (min-width: 480px) and (max-width:1199) {
+    width: 360px;
+  }
 }
 
 &__button {
-  width: 200px;  
+  max-width: 200px;  
   padding: 10px 32px;
   @include button();  
 }
@@ -39,24 +53,49 @@
 
 
 // tablet
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 769px) {
   .hero {    
-    padding: 118px 0;
+    max-width: 768px;
 
-    &__title {
-      width: 696px;
-      font-size: 44px;
-      line-height: 1.36;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(../../../img/hero-tablet.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(../../../img/hero-tablet@2x.jpg);
     }
   }
 }
 
 
 // desktop
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   .hero {    
     height: 600px;
+    max-width: 1600px;
     padding: 200px 0;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(../../../img/hero-desktop.jpg);
+    
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+      url(../../../img/hero-desktop@2x.jpg);
+  }
+
+    &__title {
+      min-width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
 
     &__button {
       width: 216px;
